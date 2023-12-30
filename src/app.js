@@ -26,7 +26,7 @@ app.use(
 
 app.listen(port, async () => {
     await dataSource.initialize();
-    // await dataSource.synchronize(true);
+    await dataSource.synchronize(true);
     await databaseUpdateScheduler();
     console.log(`Server started on port ${port}`);
 });
